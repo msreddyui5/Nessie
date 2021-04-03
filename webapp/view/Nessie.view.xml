@@ -1,0 +1,57 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.Nessie.controller.Nessie"
+xmlns:f ="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+		<Page title="Nessie" >
+				<content>
+					
+						<IconTabBar
+			id="idIconTabBar1"
+			expanded="{device>/isNoPhone}"
+			class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+					text="Welcome My Support Portal">
+				<content>
+					
+						<Button id="Btn1" text="My Support" width="70%" press="onPress1" > </Button>
+							<ToolbarSpacer/>
+						<Button id="Btn2" text="My Open Tickets" width="70%" press="onPress2"> </Button>
+							<ToolbarSpacer/>
+						<Button id="Btn3" text="My Closed Tickets" width="70%" press="onPress3"> </Button>
+							<ToolbarSpacer/>
+						<Button text="planned Maintaince" width="70%" press="onPress4"> </Button>
+				</content>
+		
+			</IconTabFilter>
+			<IconTabFilter
+					text="create Support Ticket">
+				
+				<content>
+					<f:SimpleForm editable="true" id="idContra">
+						<f:content>
+							<Label text="End user"></Label>
+							<Input  id="id1" value="{/empStr/1/DASID}"  showValueHelp="true"  valueHelpOnly="true" width="40%" maxLength= "20"> </Input>
+								<Label text="Organization"></Label>
+							<Input id="id2" value="{/empStr/2/Organization}" showValueHelp="true"  width="40%" maxLength= "20"> </Input>
+						</f:content>
+						</f:SimpleForm>
+						
+							<Button id="Btn4" text="I Want to Raise change service request" width="60%" press="onClick"> </Button>
+							<ToolbarSpacer/>
+						<Button id="Btn5" text="I have an Issue" width="60%" press="onClick2"> </Button>
+				
+		
+				</content>
+			</IconTabFilter>
+			<IconTabFilter
+					text="My Tickets">
+				<Text text="your tickets  go here ..." />
+			</IconTabFilter>
+			
+		</items>
+	</IconTabBar>
+					
+				</content>
+			</Page>
+	
+</mvc:View>

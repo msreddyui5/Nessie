@@ -1,0 +1,166 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.Nessie.controller.Ticket"
+ xmlns:l="sap.ui.layout" xmlns:f="sap.f" xmlns:fm ="sap.ui.layout.form"	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+			<Page title="Title"  showNavButton="true" navButtonPress="onBack">
+				<content>
+									<!--<Label text="End user" width="40%" textAlign="Center"></Label>
+							<Input  id="id1" value="EmployeeId"  width="30%" maxLength= "20"> </Input>
+							<ToolbarSpacer/>
+							<Label text="Organization" width="40%" textAlign="Center"></Label>
+							<Input id="id2" value="Country"  width="30%" maxLength= "20"> </Input>
+							<ToolbarSpacer/>
+							<Label text="RequestTYPE" width="40%" textAlign="Center"></Label>
+							<Input id="id3" value="Incident"  width="30%" maxLength= "20"> </Input>-->
+								<fm:SimpleForm editable="true"
+			layout="ResponsiveGridLayout"
+			title="Requset"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" 
+						>
+						<fm:content>
+							<Label text="End user"></Label>
+							<Input  id="id1" value="{/empStr/1/DASID}" showValueHelp="true" width="50%" maxLength= "20"> </Input>
+								<Label text="Organization"></Label>
+							<Input id="id2" value="{/empStr/2/Organization}" showValueHelp="true" width="50%" maxLength= "20"> </Input>
+							<Label text="Request Type"></Label>
+							<Input id="id3" value="{/empStr/3/RequestType}" showValueHelp="true" width="50%"></Input>
+						</fm:content>
+						</fm:SimpleForm>
+						<SearchField id="idSearch" search="onSearch" width="50%"> </SearchField>
+					<!--		<f:GridContainer id="demoGrid" class="sapUiSmallMargin">
+								<f:layout>
+				<f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+			</f:layout>
+			<f:layoutXS>
+				<f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+			</f:layoutXS>-->
+		<!--	<GenericTile header="H1Apprial issue" press="onPress" subheader="Subtitle">
+				<layoutData>
+					<f:GridContainerItemLayoutData minRows="2" columns="2" />
+				</layoutData>
+				<TileContent unit="EUR" footer="Current Quarter">
+					<ImageContent src="sap-icon://add-document" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile header="TimeShhet issue" press="onPress" subheader="Subtitle">
+				<layoutData>
+					<f:GridContainerItemLayoutData minRows="2" columns="2" />
+				</layoutData>
+				<TileContent>
+					<ImageContent src="sap-icon://date-time" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile header="MyAtos" press="onPress" subheader="MyLearning">
+				<layoutData>
+					<f:GridContainerItemLayoutData minRows="2" columns="2" />
+				</layoutData>
+				<TileContent>
+					<ImageContent src="sap-icon://course-book" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile header="Nessie" press="onPress" subheader="HR">
+				<layoutData>
+					<f:GridContainerItemLayoutData minRows="2" columns="2" />
+				</layoutData>
+				<TileContent>
+					<ImageContent src="sap-icon://home-share" />
+				</TileContent>
+			</GenericTile>
+			
+			<GenericTile header="MyAtos" press="onPress" subheader="MySupportPortal(mps)">
+				<layoutData>
+					<f:GridContainerItemLayoutData minRows="2" columns="2" />
+				</layoutData>
+				<TileContent>
+					<ImageContent src="sap-icon://add-employee" />
+				</TileContent>
+			</GenericTile>
+								
+			</f:GridContainer>-->
+			<l:HorizontalLayout allowWrapping="true">
+                                                                        <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" >
+                                                                                    <GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne"
+                                                                                                press="pressOnSupplierTile">
+                                                                                                <tileContent>
+                                                                                                            <TileContent footer="August 21, 2016">
+                                                                                                                        <content>
+                                                                                                                                    <NewsContent contentText="H1 Apprisal" subheader="Today, SAP News"/>
+                                                                                                                        </content>
+                                                                                                            </TileContent>
+                                                                                                </tileContent>
+                                                                                    </GenericTile>
+                                                                        </SlideTile>
+                                                                        <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+                                                                                    <GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne"
+                                                                                                press="pressOnCustomerTile">
+                                                                                                <tileContent>
+                                                                                                            <TileContent footer="August 21, 2016">
+                                                                                                                        <content>
+                                                                                                                                    <NewsContent contentText="Timesheet" subheader="Today, SAP News"/>
+                                                                                                                        </content>
+                                                                                                            </TileContent>
+                                                                                                </tileContent>
+                                                                                    </GenericTile>
+                                                                        </SlideTile>
+                                                                        <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+                                                                                    <GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne"
+                                                                                                press="pressOnBusinessTile">
+                                                                                                <tileContent>
+                                                                                                            <TileContent footer="August 21, 2016">
+                                                                                                                        <content>
+                                                                                                                                    <NewsContent contentText="My Atos Learning" subheader="Today, SAP News"/>
+                                                                                                                        </content>
+                                                                                                            </TileContent>
+                                                                                                </tileContent>
+                                                                                    </GenericTile>
+                                                                        </SlideTile>
+                                                                         <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+                                                                                    <GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne"
+                                                                                                press="pressOnBusinessTile">
+                                                                                                <tileContent>
+                                                                                                            <TileContent footer="August 21, 2016">
+                                                                                                                        <content>
+                                                                                                                                    <NewsContent contentText="Nessie HR" subheader="Today, SAP News"/>
+                                                                                                                        </content>
+                                                                                                            </TileContent>
+                                                                                                </tileContent>
+                                                                                    </GenericTile>
+                                                                        </SlideTile>
+                                                                        <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+                                                                                    <GenericTile backgroundImage="test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png" frameType="TwoByOne"
+                                                                                                press="pressOnBusinessTile">
+                                                                                                <tileContent>
+                                                                                                            <TileContent footer="August 21, 2016">
+                                                                                                                        <content>
+                                                                                                                                    <NewsContent contentText="My Atos My Support Portal" subheader="Today, SAP News"/>
+                                                                                                                        </content>
+                                                                                                            </TileContent>
+                                                                                                </tileContent>
+                                                                                    </GenericTile>
+                                                                        </SlideTile>
+                                                            </l:HorizontalLayout>
+	
+					
+					
+				</content>
+				<footer>
+			 <Toolbar>
+				<ToolbarSpacer/>
+				<Button type="Emphasized" text="Reset" press="onClose" />
+				
+			</Toolbar>
+		</footer>
+			</Page>
+	
+</mvc:View>
